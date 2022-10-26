@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #222831;
+  padding: 0 16px;
+  position: relative;
+}
+
+header {
+  background-color: #232931;
+  border-radius: 8px;
+  box-shadow: -2px -2px 8px 1px rgba(161, 161, 201, 0.2),
+    2px 2px 8px 1px rgba(0, 0, 0, 0.8);
+  margin: auto -16px;
+  padding: 16px 32px;
+}
+
+header h1 {
+  color: #fff;
+  font-weight: 200;
+  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff,
+    0 0 40px #0ff, 0 0 50px #0ff;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #ccc;
+}
+
+.container {
+  min-height: 75vh;
+}
+
+.card-container,
+.form-container {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.card-container {
+  padding-top: 0px;
+}
+
+.note {
+  background-color: #232931;
+  border-radius: 8px;
+  box-shadow: -2px -2px 8px 1px rgba(161, 161, 201, 0.2),
+    2px 2px 8px 1px rgba(0, 0, 0, 0.8);
+  padding: 32px;
+  width: 240px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.note h1 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: white;
+}
+.note p {
+  color: rgba(245, 245, 245, 0.616);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  border-radius: 15px;
+  background-image: linear-gradient(145deg, #252c34, #20252c);
+  box-shadow: 4px 4px 7px #191e23, -4px -4px 7px #2d343f;
+  border: 0px;
+  padding: 6px 18px;
+  color: rgba(255, 255, 255, 0.601);
+  z-index: 1;
+}
+
+.note button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(145deg, #20252c, #252c34);
+  border-radius: 15px;
+  z-index: -1;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+.note button:hover::before {
+  opacity: 1;
+}
+
+.note input,
+.note textarea {
+  background: transparent;
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  color: white;
+  font-family: inherit;
+  resize: none;
+}
